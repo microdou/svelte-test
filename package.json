@@ -5,24 +5,23 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "format": "npx prettier --write --plugin-search-dir=. ./**/*.{js,ts,svelte,css,html}"
   },
   "devDependencies": {
-    "@mdi/js": "^5.9.55",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@rollup/plugin-typescript": "^8.2.0",
     "@tsconfig/svelte": "^1.0.10",
-    "postcss": "^8.2.6",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.1.6",
     "rollup": "^2.39.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.32.8",
     "svelte": "^3.32.3",
     "svelte-check": "^1.1.35",
-    "svelte-materialify": "^0.3.5",
     "svelte-preprocess": "^4.6.9",
     "tslib": "^2.1.0",
     "typescript": "^4.1.5"
