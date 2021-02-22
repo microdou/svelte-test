@@ -4,5 +4,12 @@ import { Button } from "svelte-materialify";
 
 <Button size="x-large" class="green white-text">Hello</Button>
 
-<style>
+<style global lang="postcss">
+/* only apply purgecss on utilities, per Tailwind docs */
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
 </style>
