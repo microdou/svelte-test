@@ -1,8 +1,11 @@
 <script lang="ts">
-import { Button, Icon, ButtonGroup, ButtonGroupItem } from "svelte-materialify";
-import { mdiHeart } from "@mdi/js";
+import { Button, Icon, ProgressLinear, ProgressCircular } from "svelte-materialify";
+import { mdiPlusCircleOutline } from "@mdi/js";
 export let name: string;
 let value = 1;
+function addOne() {
+  value += 1;
+}
 </script>
 
 <main>
@@ -12,16 +15,12 @@ let value = 1;
     how to build Svelte apps.
   </p>
   <div class="text-center">
-    <Button class="pink-text">
-      <Icon path={mdiHeart} />
-      Hello
+    <Button class="pink-text" on:click={addOne}>
+      <Icon path={mdiPlusCircleOutline} />
+      Add One!
     </Button>
-    <ButtonGroup activeClass="primary-color" bind:value>
-      <ButtonGroupItem>Left</ButtonGroupItem>
-      <ButtonGroupItem>Center</ButtonGroupItem>
-      <ButtonGroupItem>Right</ButtonGroupItem>
-      <ButtonGroupItem>Justify</ButtonGroupItem>
-    </ButtonGroup>
+    <ProgressLinear bind:value />
+    <ProgressCircular bind:value />
     <br />
     Value:
     {value}
