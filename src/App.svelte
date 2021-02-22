@@ -1,4 +1,5 @@
 <script lang="ts">
+import Materialify from "./Materialify.svelte";
 export let name: string;
 </script>
 
@@ -8,6 +9,7 @@ export let name: string;
     Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
+  <Materialify />
 </main>
 
 <style>
